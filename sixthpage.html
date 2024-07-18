@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar .icon {
+            display: none;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide */
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                float: none;
+                display: none;
+                text-align: left;
+                padding: 14px;
+            }
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT US</a>
+    <a href="#services">OUR SERVICES</a>
+    <a href="#contact">CONTACT US</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+        &#9776;
+    </a>
+</div>
+
+<script>
+    function toggleNav() {
+        var x = document.getElementById("navbar");
+        var links = x.getElementsByTagName("a");
+        for (var i = 0; i < links.length; i++) {
+            if (links[i].className !== "icon") {
+                if (links[i].style.display === "block") {
+                    links[i].style.display = "none";
+                } else {
+                    links[i].style.display = "block";
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

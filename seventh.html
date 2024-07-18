@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .navbar {
+            background-color: #000000;
+            overflow: hidden;
+            position: relative;
+        }
+        .navbar a, .navbar label {
+            color: yellow;
+            padding: 20px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+        .navbar a {
+            float: right;
+        }
+        .navbar a:hover {
+            background-color: #0ae41c;
+            color: rgb(241, 11, 11);
+        }
+        .navbar .icon {
+            display: none;
+        }
+        #nav-toggle {
+            display: none;
+        }
+        .navbar label {
+            float: right;
+            display: none;
+            cursor: pointer;
+            background-color: #ee0606;
+        }
+        .navbar span.logo {
+            color: #0ae41c;
+            padding: 20px;
+            float: left;
+            font-size: 20px;
+        }
+        @media (max-width: 700px) {
+            .navbar a {
+                float: none;
+                display: none;
+                width: 100%;
+                text-align: left;
+            }
+            .navbar .icon {
+                float: right;
+                display: block;
+            }
+            .navbar label {
+                display: block;
+            }
+            #nav-toggle:checked + label + a,
+            #nav-toggle:checked + label + a + a,
+            #nav-toggle:checked + label + a + a + a,
+            #nav-toggle:checked + label + a + a + a + a,
+            #nav-toggle:checked + label + a + a + a + a + a {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle">&#9776;</label>
+ 
+        <a href="#contact">CONTACT US</a>
+        <a href="#products">OUR PRODUCTS</a>
+        <a href="#services">OUR SERVICES</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#home">HOME</a>
+        <span class="logo">Ajao</span>
+    </div>
+    <img src="1.png" width="100%">
+    <a href="register.html">Click here to register</a>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Column Layout with Responsive Image</title>
+  <style>
+    /* Ensure the image is responsive */
+    
+
+    /* Optional: Make the layout responsive */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .column {
+      flex: 1 1 100%; /* Default to full width on small screens */
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    body{
+      background-color: brown;
+    }
+    @media (max-width: 700px)
+    {
+      .responsive-img{
+            width: 100%;
+        }
+
+        body{
+          background-color: blue;
+        }
+    }
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column">
+      <img src="1.png" width="700px" class="responsive-img">
+    </div>
+    <div class="column">
+      <h1>Your Title Here</h1>
+      <p>Your text content goes here. This is where you can put information about your website, products, or services.</p>
+    </div>
+  </div>
+</body>
+</html>
