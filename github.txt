@@ -1,0 +1,7 @@
+cd /path/to/your/laravel-project
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main  # Rename the current branch to main
+git remote add origin https://github.com/nuto247/investment.git
+git push -u origin main
